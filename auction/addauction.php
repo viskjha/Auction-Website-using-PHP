@@ -168,16 +168,7 @@ include 'nav.php';
                 } ?>
             </div>
         </div>
-        <!-- Auction Start -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="start-auction">Auction Start</label>
-            <div class="col-md-4">
-                <div class = "input-group">
-                    <span class="input-group-addon"></span>
-                    <input type="datetime-local" id="start-auction" name="start-auction" placeholder="Auction Start" class="form-control" required>
-                </div>
-            </div>
-        </div>
+        
         <!-- Auction Duration -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="auction-duration">Auction Duration</label>
