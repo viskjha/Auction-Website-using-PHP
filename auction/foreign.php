@@ -170,7 +170,7 @@ if (!empty($data)) {
 
 
     ?>
-    <!--
+    
      <div class="row">
         <div
             class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
@@ -191,9 +191,9 @@ if (!empty($data)) {
         </div>
     </div>
     </div>
-
+s
     <script>
-    /*
+    
         $(document).ready(function(){
             $("#stars-default").rating();
         });
@@ -209,7 +209,7 @@ if (!empty($data)) {
                     data: formData,
                     success: function(result){
                         console.log('Works');
-                        //window.location.href = 'rating.php?da='+formData;
+                        window.location.href = 'rating.php?da='+formData;
                     },
                     error: function(e){
                         window.location.href = 'rating.php?rating='+$('input[name=rating]').val()+'&user='+$('input[name=user]').val();
@@ -217,8 +217,8 @@ if (!empty($data)) {
                 });
             });
         });
-        */
+    
     </script>
-    -->
+    
 
 

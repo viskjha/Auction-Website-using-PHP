@@ -45,7 +45,7 @@
 }
 
 .product-stock{
-	color: #74DF00;
+	color: #109302;
 	font-size: 20px;
 	margin-top: 10px;
 }
@@ -59,13 +59,14 @@
 *********************************************/
 
 .content-wrapper {
-	max-width: 1140px;
-	background: #fff;
+	max-width: 1170px;
+	background: #D7D4CA;
 	margin: 0 auto;
 	margin-top: 25px;
 	margin-bottom: 10px;
-	border: 0px;
-	border-radius: 0px;
+	border: solid 2px;
+	border-radius: 15px;
+	padding-bottom: 30px;
 }
 
 .container-fluid2{

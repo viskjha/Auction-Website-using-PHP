@@ -23,7 +23,7 @@ function setClock(endtime,destination,id){
 	var inter = setInterval(function(){
         var timeLeft = getTimeRemaining(endtime);
         clock.innerHTML = 'Time Remaining: days: ' + timeLeft.days +
-                      	' hours: '+ timeLeft.hours +
+                      	' hours:&nbsp; '+ timeLeft.hours +
                       	' minutes: ' + timeLeft.minutes +
                       	' seconds: ' + timeLeft.seconds;
 		if(timeLeft.total<= 900000){

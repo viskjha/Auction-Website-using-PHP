@@ -21,14 +21,7 @@ require_once('dbConnection.php');
     <link href="css/loginregister.css" rel="stylesheet">
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- jQuery -->
+    
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -40,24 +33,19 @@ require_once('dbConnection.php');
     <script src="js/bootstrap.min.js"></script>
 
 
-
-
-    <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
-    <meta name="author" content="Vincent Garreau" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" media="screen" href="cssd/style.css">
-
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!-- remember, jQuery is completely optional -->
+  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
+  <script type='text/javascript' src='./jquery.particleground.js'></script>
+  <script type='text/javascript' src='js/demo.js'></script>
 
 </head>
-
 <body>
 
-
-
-
-<!-- count particles -->
-<div class="count-particles">
-
+<div id="particles">
+ <div id="intro">
 
 <div class="container">
         <div class="row">
@@ -148,8 +136,8 @@ require_once('dbConnection.php');
             if($_GET['val']=="success"){
                 echo "<script>
                         $(function() {
-                            $('#errorlog').text('Registration Successful!').css('background-color','#1CA347').css('visibility','visible');
-                            $('#errorlog').delay(2000).fadeOut('slow');
+                            $('#errorlog').text('Registration Successful!').css('background-color','#006400').css('visibility','visible');
+                            $('#errorlog').delay(4000).fadeOut('slow');
                         });
                      </script>";
             }else{
@@ -165,7 +153,7 @@ require_once('dbConnection.php');
                 echo "<script>
                         $(function() {
                             $('#errorlog').text('".$errString."').css('background-color','#FF072D').css('visibility','visible');
-                            $('#errorlog').delay(2000).fadeOut('slow');
+                            $('#errorlog').delay(3000).fadeOut('slow');
                             $('#login-form').fadeOut(8);
                             $('#register-form').delay(10).fadeIn(10);
                             $('#login-form-link').removeClass('active');
@@ -175,66 +163,10 @@ require_once('dbConnection.php');
             }
         }
 
-        
-
-
     ?>
 
-
-
-
-
-
-
-
-
-
-  
+</div>
 </div>
 
-
-<!-- particles.js container -->
-<div id="particles-js"></div>
-
-
-<!-- scripts -->
-<script src="particles.js"></script>
-<script src="jsd/app.js"></script>
-
-<!-- stats.js -->
-<script src="js/lib/stats.js"></script>
-<script>
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-</script>
-
-
-
-
-
-
-
-
-    
 </body>
-
-
-
-
-
 </html>

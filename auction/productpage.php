@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
         $response->execute();
 
         //Get previous bidder id
-        $previousSQL = 'SELECT user_id, bid_price FROM ebay_clone.Bids WHERE auction_id = :auctionID ORDER BY bid_price DESC LIMIT 1, 1';
+        $previousSQL = 'SELECT user_id, bid_price FROM auction.Bids WHERE auction_id = :auctionID ORDER BY bid_price DESC LIMIT 1, 1';
         $previousSTMT = $db->prepare($previousSQL);
         $previousSTMT->bindParam(':auctionID', $auctionID);
         $previousSTMT->execute();
@@ -173,7 +173,7 @@ if (isset($_GET["auct"])) {
 include('nav.php');
 ?>
 
-<div class="container-fluid2" style="padding-top:50px">
+<div class="container-fluid2" style="padding-top:70px">
     <div class="content-wrapper" style="padding-top:50px">
         <div class="item-container">
             <div class="container-fluid">
